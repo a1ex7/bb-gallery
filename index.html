@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone RSS</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="libs/jgallery/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="libs/jgallery/css/jgallery.min.css" />
+  
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="feeds">
+          <h1 class="feeds__title">Select the feed</h1>
+          <div class="feeds__link center-block">
+            <a href="/" class="feed__link btn btn-default">Home</a>
+            <a href="#feeds/136046346@N06" class="feed__link btn btn-default">Feed 1</a>
+            <a href="#feeds/33616145@N00" class="feed__link btn btn-default">Feed 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bb-gallery"></div>
+
+  <script type="text/template" id="feed-template">
+    <a href="<%= enclosure.url %>"><img src="<%= image %>" alt="<%= title %>" /></a>
+  </script>
+
+  <script src="js/vendor/jquery/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="libs/jgallery/js/jgallery.min.js"></script>
+  <script src="js/vendor/underscore/underscore-min.js"></script>
+  <script src="js/vendor/backbone/backbone-min.js"></script>
+  <script src="js/vendor/jquery/jquery.jfeed.js"></script>
+  <script src="js/vendor/backbone/backbone.jfeed.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
